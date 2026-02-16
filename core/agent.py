@@ -3,6 +3,14 @@ import re
 from core.agent_tools import filter_products, get_cheapest_product
 from core.normalizer import infer_category
 
+SUPPORTED_CATEGORIES = {
+    "sofa",
+    "loveseat",
+    "armchair",
+    "ottoman",
+    "sofa bed"
+}
+
 def is_greeting(text: str) -> bool:
     greetings = {
         "hi", "hello", "hey",
@@ -30,6 +38,31 @@ def handle_user_query(query: str, products: list):
     # 3️⃣ Detect category
     category = infer_category(query_lower)
 
+    # 🔧 Normalize category safely
+    if category:
+        category = category.strip().lower()
+
+    # 🚨 Unsupported or unknown category
+    if category and category not in SUPPORTED_CATEGORIES:
+        suggestions = filter_products(products)[:3]
+
+        # Treat any "other*" as unknown
+        if category.startswith("other"):
+            message = (
+                "Sorry, we don’t have that product right now. "
+                "But I’d be happy to show you some other options you might like."
+            )
+        else:
+            message = (
+                f"Sorry, we don’t carry {category}s right now. "
+                "But I’d be happy to show you some other products you might like."
+            )
+
+        return {
+            "message": message,
+            "results": suggestions
+        }
+
     # 4️⃣ Filter products
     results = filter_products(
         products,
@@ -37,7 +70,7 @@ def handle_user_query(query: str, products: list):
         category=category
     )
 
-    # 5️⃣ Fallback: cheapest
+    # 5️⃣ Fallback: cheapest (valid category, budget too low)
     if not results and max_price:
         cheapest = get_cheapest_product(products, category=category)
         if cheapest:
