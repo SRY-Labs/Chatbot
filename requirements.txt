@@ -1,5 +1,4 @@
-requests
 fastapi
 uvicorn
-requests
-websocket-client
+python-dotenv
+websockets

@@ -4,56 +4,7 @@
     "product_url": "https://robertallendesign.com/products/la-roux-sofa",
     "price_usd": 2320.0,
     "compare_at_price": 4640.0,
-    "available": false
-  },
-  {
-    "product_name": "La Roux Sofa",
-    "product_url": "https://robertallendesign.com/products/la-roux-sofa",
-    "price_usd": 2320.0,
-    "compare_at_price": 4640.0,
     "available": true
-  },
-  {
-    "product_name": "La Roux Sofa",
-    "product_url": "https://robertallendesign.com/products/la-roux-sofa",
-    "price_usd": 2720.0,
-    "compare_at_price": 5440.0,
-    "available": true
-  },
-  {
-    "product_name": "La Roux Sofa",
-    "product_url": "https://robertallendesign.com/products/la-roux-sofa",
-    "price_usd": 2720.0,
-    "compare_at_price": 5440.0,
-    "available": true
-  },
-  {
-    "product_name": "La Roux Sofa",
-    "product_url": "https://robertallendesign.com/products/la-roux-sofa",
-    "price_usd": 2320.0,
-    "compare_at_price": 4640.0,
-    "available": false
-  },
-  {
-    "product_name": "Lust Sofa",
-    "product_url": "https://robertallendesign.com/products/lust-sofa",
-    "price_usd": 2400.0,
-    "compare_at_price": 4800.0,
-    "available": true
-  },
-  {
-    "product_name": "Lust Sofa",
-    "product_url": "https://robertallendesign.com/products/lust-sofa",
-    "price_usd": 2400.0,
-    "compare_at_price": 4800.0,
-    "available": true
-  },
-  {
-    "product_name": "Lust Sofa",
-    "product_url": "https://robertallendesign.com/products/lust-sofa",
-    "price_usd": 2400.0,
-    "compare_at_price": 4800.0,
-    "available": false
   },
   {
     "product_name": "Lust Sofa",
@@ -68,13 +19,6 @@
     "price_usd": 1960.0,
     "compare_at_price": 3920.0,
     "available": true
-  },
-  {
-    "product_name": "Terra Sofa",
-    "product_url": "https://robertallendesign.com/products/terra-sofa",
-    "price_usd": 1960.0,
-    "compare_at_price": 3920.0,
-    "available": false
   },
   {
     "product_name": "Nicholas Sofa 93\"",
